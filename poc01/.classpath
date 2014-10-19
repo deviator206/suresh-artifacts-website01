@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre7">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v6.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/Project/PERSONAL/poc-rest-api-in-java/ApacheWinkJAXRSLibrary/activation-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Project/PERSONAL/poc-rest-api-in-java/ApacheWinkJAXRSLibrary/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Project/PERSONAL/poc-rest-api-in-java/ApacheWinkJAXRSLibrary/commons-lang-2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Project/PERSONAL/poc-rest-api-in-java/ApacheWinkJAXRSLibrary/geronimo-j2ee_1.4_spec-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Project/PERSONAL/poc-rest-api-in-java/ApacheWinkJAXRSLibrary/jaxb-api-2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Project/PERSONAL/poc-rest-api-in-java/ApacheWinkJAXRSLibrary/jaxb-impl-2.1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Project/PERSONAL/poc-rest-api-in-java/ApacheWinkJAXRSLibrary/jcl-over-slf4j-1.5.6.jar"/>
+	<classpathentry kind="lib" path="C:/Project/PERSONAL/poc-rest-api-in-java/ApacheWinkJAXRSLibrary/json-20080701.jar"/>
+	<classpathentry kind="lib" path="C:/Project/PERSONAL/poc-rest-api-in-java/ApacheWinkJAXRSLibrary/jsr311-api-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Project/PERSONAL/poc-rest-api-in-java/ApacheWinkJAXRSLibrary/slf4j-api-1.5.8.jar"/>
+	<classpathentry kind="lib" path="C:/Project/PERSONAL/poc-rest-api-in-java/ApacheWinkJAXRSLibrary/slf4j-simple-1.5.8.jar"/>
+	<classpathentry kind="lib" path="C:/Project/PERSONAL/poc-rest-api-in-java/ApacheWinkJAXRSLibrary/spring-2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Project/PERSONAL/poc-rest-api-in-java/ApacheWinkJAXRSLibrary/stax-api-1.0-2.jar"/>
+	<classpathentry kind="lib" path="C:/Project/PERSONAL/poc-rest-api-in-java/ApacheWinkJAXRSLibrary/wink-client-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="C:/Project/PERSONAL/poc-rest-api-in-java/ApacheWinkJAXRSLibrary/wink-client-apache-httpclient-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="C:/Project/PERSONAL/poc-rest-api-in-java/ApacheWinkJAXRSLibrary/wink-common-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="C:/Project/PERSONAL/poc-rest-api-in-java/ApacheWinkJAXRSLibrary/wink-sdk-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="C:/Project/PERSONAL/poc-rest-api-in-java/ApacheWinkJAXRSLibrary/wink-server-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="C:/Project/PERSONAL/poc-rest-api-in-java/ApacheWinkJAXRSLibrary/wink-spring-support-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="C:/Project/PERSONAL/poc-rest-api-in-java/ApacheWinkJAXRSLibrary/wink-webdav-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="C:/Project/PERSONAL/poc-rest-api-in-java/ApacheWinkJAXRSLibrary/xercesImpl-2.6.2.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
