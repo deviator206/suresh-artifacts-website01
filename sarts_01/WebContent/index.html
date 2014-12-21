@@ -47,12 +47,14 @@
 
 	</script>
   <script type="text/template" id="galleryItemTemplate">
-  	<article>
+  	<article id="<%=imgId=%>">
                    	  <div class="col-md-3 text-center">
                         	<div class="thumbnail ">
-                        	<a href="#"  data-toggle="modal" data-target=".bs-example-modal-lg">
+                        	<a href="#"  data-toggle="modal" >
                             <img src="<%=imgPath=%>"></a></div>
-                        	<h4><strong class="color-green"><%=imgDescription=%> </strong></h4>
+							<h4><strong class="color-green img-label"><%=imgLabel=%> </strong></h4>
+                        	<h4><strong class="color-green img-description"><%=imgDescription=%> </strong></h4>
+
                             <p><%=imgDimension=%><br>
                             20 x 22 x 22 cm </p>
                             <h4>Price :  <%=imgPrice=%></h4>
@@ -593,7 +595,7 @@
      </section> <!-- End Gallery section  -->
      
    <!----------------- Thumbnail Modal ------------------>
-            	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" 
+            	<div id="mainModalDisplayed" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" 
                 aria-labelledby="myLargeModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
@@ -633,6 +635,65 @@
                             <div class="clearfix"></div>
                             <div class="col-md-3"> 
                             <a href="#"><img src="img/facebook-login-button.png"></a></div>
+                            <div class="col-md-5">
+                                <div class="input-group " style=" margin-top:4px;">
+                                   <input type="text" class="form-control" style="  height:38px;" placeholder="Please Enter Number or email">
+                                   <span class="input-group-addon bg-success"><a href="">Submit</a></span>
+                                 </div>
+                             </div>
+                            <div class="col-md-4 text-right"><h1 style="margin: -7px 0px;">Price. Rs. 299</h1></div>
+                            <div class="clearfix"></div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+                    </div>
+                  </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                <div id="mainModalDisplayed1" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" 
+                aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                     	<div class="modal-header">
+                            <button data-dismiss="modal" class="close" type="button">
+                            <span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                            <h4 id="myModalLabel" class="modal-title">Sculpture NEW Description</h4> 	
+        				</div>
+                        
+                        <div class="modal-body ">
+                        	<div class="col-md-3 text-center">
+                                <div class="thumbnail">
+                                    <a href="img/medium-01.jpg">
+                                    <img class="center-block modal-img-src" src="img/th-01.jpg"></a>
+                                 </div>
+                                 p>8.5 x 9 x 9 in<br>
+                                20 x 22 x 22 cm </p>
+                            </div>
+                            <div class="col-md-9">
+                            	<h3  style="margin: -7px 0px 10px  0px ;"></h3>
+                                <p>
+                                	<strong>Manufacturer:</strong> Artist Name<br>
+                                    <strong>Material:</strong> Plaster of Paris and Acrylic Color<br>
+                                    <strong> Height:</strong> 40 cm/15.7 inch<br>
+                                    <strong> Width:</strong> 40 cm/15.7 inch<br>
+                                    <strong>Depth:</strong> 3 cm/1.2 inch<br>
+                                    <strong>Weight gross:</strong> 2 kg
+                                </p>
+                                <h5 id="myModelDescription" >The long and rich traditions of India’s modern Bengal art have been eclipsed 
+                                in recent years by members of the famous </h5>
+                                <br>
+                              </div>
+                              
+                              
+                            <div class="clearfix"></div>
                             <div class="col-md-5">
                                 <div class="input-group " style=" margin-top:4px;">
                                    <input type="text" class="form-control" style="  height:38px;" placeholder="Please Enter Number or email">

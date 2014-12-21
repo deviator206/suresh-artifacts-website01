@@ -136,28 +136,18 @@ deviatorUI.render = function(id, objData) {
 	return baseString;
 }
 
-// galleryItemTemplate
 
-// galleryItemTemplate
-var galleryDataCategory2 = [ {
-	"imgPath" : "img/thumbnails/Thumbnail_211x141_1.jpg",
-	"imgDescription" : "Thumbnail 1",
-	"imgDimension" : "10x10x01x10",
-	"imgPrice" : "2000INR"
-}, {
-	"imgPath" : "img/thumbnails/Thumbnail_211x141_1.jpg",
-	"imgDescription" : "Thumbnail 1",
-	"imgDimension" : "10x10x01x10",
-	"imgPrice" : "2000INR"
-},
-
-]
-var loadGalleryItems = function(parentId, galleryData) {
+var loadGalleryItems = function(parentId, galleryData,catId) {
 	var strHTML = "";
 	for ( var i = 0; i < galleryData.length; i++) {
-		strHTML += deviatorUI.render("galleryItemTemplate", galleryData[i]);
+		galleryData[i]["imgId"] = catId+"_"+i;
+		galleryData[i]["imgLabel"] ="Label : "+catId+"_"+i;
+		strHTML = deviatorUI.render("galleryItemTemplate", galleryData[i]);
+		$("#"+parentId).append(strHTML);
+		
+		document.getElementById(galleryData[i]["imgId"]).addEventListener("click", onImageClicked);
 	}
-	document.getElementById(parentId).innerHTML = strHTML;
+	//document.getElementById(parentId).innerHTML = strHTML;
 
 };
 
@@ -179,7 +169,7 @@ var listenerOnCategories = function() {
 		$("#accordion").append(strHTML);
 
 		loadGalleryItems(categoryArray[i]["categoryDivName"],
-				categoryArray[i]["categorySource"]);
+				categoryArray[i]["categorySource"],categoryArray[i]["categoryId"]);
 
 		document.getElementById(categoryArray[i]["categoryDivName"]).style.display = "none";
 
@@ -205,6 +195,19 @@ var onCategoryClicked = function(evt) {
 			document.getElementById(categoryArray[i]["categoryDivName"]).style.display = "none";
 	}
 
-	console.log("ASD>" + str)
+	
 
+};
+
+
+var onImageClicked = function(evt)
+{
+	var str =evt.currentTarget.id;
+	
+	$("#mainModalDisplayed1 #myModalLabel").html($("#" +str+" .img-label").html());
+	
+	$("#mainModalDisplayed1 #myModelDescription").html($("#" +str+" .img-description").html());
+	
+	$("#mainModalDisplayed1 .modal-img-src").attr("src",$("#" +str+" img").attr("src"))
+	$("#mainModalDisplayed1").modal('toggle');
 }
