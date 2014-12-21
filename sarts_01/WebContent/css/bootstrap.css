@@ -6230,9 +6230,9 @@ h6 a span {color:#ccc;}
 
 
 .bg-01
-{ background: url("../img/bg-web.jpg") no-repeat scroll 0 0 #fff;
-    display: block;
-    height: 396px;
+{ 
+	display: block;
+    height: 388px;
     width: 100%;
 	background-size: 100%;
 	margin-top:50px;
@@ -6242,7 +6242,7 @@ h6 a span {color:#ccc;}
 @media only screen 
 and (min-device-width : 768px) and (max-device-width : 1024px) {
 
-	.bg-01{ background: url("../img/bg-tab.jpg") no-repeat;
+	.bg-01{
 	height: 388px;
 	width: 100%;
 	background-size: 100%;}
@@ -6252,10 +6252,58 @@ and (min-device-width : 768px) and (max-device-width : 1024px) {
 	
 @media only screen 
 and (min-device-width : 320px) and (max-device-width : 480px)
-{
-.bg-01{ background: url("../img/bg-mb.jpg") no-repeat;
-	height: 516px;
-	width: 100%;
-	background-size: 100%;}
+	{
+	.bg-01{
+		height: 516px;
+		width: 100%;
+		background-size: 100%;
+		}
 	
 	}
+	
+	
+	
+	.banner-1
+	{
+		background: url("../img/banner/Banner_1088x526_1.jpg") no-repeat  scroll 0 0 #fff;
+		background-size:100% 100%;
+	}
+	
+	.banner-2
+	{
+		background: url("../img/banner/Banner_1088x526_2.jpg") no-repeat  scroll 0 0 #fff;
+		background-size:100% 100%;
+	}
+	
+	.banner-3
+	{
+		background: url("../img/banner/Banner_1088x526_3.jpg") no-repeat  scroll 0 0 #fff;
+		background-size:100% 100%;
+	}
+	
+	.banner-4
+	{
+		background: url("../img/banner/Banner_1088x526_4.jpg") no-repeat;
+		background-size:100% 100%;
+	}
+	
+	.banner-5
+	{
+		background: url("../img/banner/Banner_1088x526_5.jpg") no-repeat;
+		background-size:100% 100%;
+	}
+	
+	.banner-6
+	{
+		background: url("../img/banner/Banner_1088x526_6.jpg") no-repeat;
+		background-size:100% 100%;
+	}
+	
+	.banner-7
+	{
+		background: url("../img/banner/Banner_1088x526_7.jpg") no-repeat;
+		background-size:100% 100%;
+	}
+	
+	
+	

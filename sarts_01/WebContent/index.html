@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.ico">
-   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <!--  
+    <link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.ico"> 
+    -->
     
 
     <title>SugandhArts</title>
@@ -21,19 +22,50 @@
    
 	<script src="js/jquery.js" type="text/javascript"></script>
   	<script src="js/bootstrap.js" type="text/javascript"></script>
+  	<script src="js/data.js" type="text/javascript"></script>
     <script src="js/src.js"></script>
   </head>
 
   <body>
+  
+  <script type="text/template" id="categoriesTemplate">
+
+	<div class="panel panel-default" id="<%=categoryId=%>">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#<%=collapseOne=%>">
+                                  <%=categoryName=%>
+                                </a>
+                              </h4>
+                            </div>
+                            <!--<div id="<%=collapseOne=%>" class="panel-collapse collapse">
+                              <div class="panel-body">
+                              	<a href="#<%=categoryDivName=%>"><%=defaultName=%></a><hr>
+                              </div>
+                            </div>-->
+                          </div>
+
+	</script>
+  <script type="text/template" id="galleryItemTemplate">
+  	<article>
+                   	  <div class="col-md-3 text-center">
+                        	<div class="thumbnail ">
+                        	<a href="#"  data-toggle="modal" data-target=".bs-example-modal-lg">
+                            <img src="<%=imgPath=%>"></a></div>
+                        	<h4><strong class="color-green"><%=imgDescription=%> </strong></h4>
+                            <p><%=imgDimension=%><br>
+                            20 x 22 x 22 cm </p>
+                            <h4>Price :  <%=imgPrice=%></h4>
+                          </div>
+                    </article>
+  
+  </script>
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
             <div class="navbar-header">
                 <div class="navbar-left">
-                    
                     <a class="navbar-brand" href="#"><img src="img/logo-header.png" style="margin-top:-10px;"></a>
-                    
-                    
                 </div>
             
           
@@ -52,7 +84,7 @@
                     <li class="active"><a href="#" >Home</a></li>
                     <li><a href="#aboutUs">About us </a></li>
                     <li ><a href="#gallerySection">Gallery</a></li>
-					 <li ><a href="#soldOutSection">SoldOut</a></li>
+					<!--  <li ><a href="#soldOutSection">SoldOut</a></li> -->
                     <li><a href="#contactUs">Contact us</a></li>
                   
                    
@@ -68,15 +100,19 @@
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class=""></li>
         <li class="" data-target="#myCarousel" data-slide-to="1"></li>
         <li class="active" data-target="#myCarousel" data-slide-to="2"></li>
+        <li class="active" data-target="#myCarousel" data-slide-to="3"></li>
+        <li class="active" data-target="#myCarousel" data-slide-to="4"></li>
+        <li class="active" data-target="#myCarousel" data-slide-to="5"></li>
+        <li class="active" data-target="#myCarousel" data-slide-to="6"></li>
+        <li class="active" data-target="#myCarousel" data-slide-to="7"></li>
       </ol>
       
       
       <div class="carousel-inner">
       	<div class="item active">
-          <div class="bg-01">
+          <div class="bg-01  banner-1">
           <div class="container">
             <div class="carousel-caption"> </div><!-- Can Add Banner Text ------>
           </div>
@@ -84,7 +120,7 @@
         </div>
         
         <div class="item ">
-          <div class="bg-01">
+          <div class="bg-01   banner-2">
           <div class="container">
             <div class="carousel-caption"> </div><!-- Can Add Banner Text ------>
           </div>
@@ -92,12 +128,49 @@
         </div>
         
         <div class="item ">
-         <div class="bg-01">
+         <div class="bg-01   banner-3">
           <div class="container">
             <div class="carousel-caption"> </div><!-- Can Add Banner Text ------>
           </div>
           </div>
         </div>
+        
+        
+        <div class="item ">
+         <div class="bg-01   banner-4">
+          <div class="container">
+            <div class="carousel-caption"> </div><!-- Can Add Banner Text ------>
+          </div>
+          </div>
+        </div>
+        
+        
+        <div class="item ">
+         <div class="bg-01   banner-5">
+          <div class="container">
+            <div class="carousel-caption"> </div><!-- Can Add Banner Text ------>
+          </div>
+          </div>
+        </div>
+        
+        <div class="item ">
+         <div class="bg-01   banner-6">
+          <div class="container">
+            <div class="carousel-caption"> </div><!-- Can Add Banner Text ------>
+          </div>
+          </div>
+        </div>
+        
+        
+        <div class="item ">
+         <div class="bg-01   banner-7">
+          <div class="container">
+            <div class="carousel-caption"> </div><!-- Can Add Banner Text ------>
+          </div>
+          </div>
+        </div>
+        
+        
         </div>
         
      	<a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -111,7 +184,7 @@
   
    
     <!-- Gallery section -->
-    <section id="" class="" >
+    <section id="" class=""  style="display:none;">
         <div class="">
             <div class="container">
             	<div class="col-md-12 center-block text-center">
@@ -266,7 +339,7 @@
     
     
      <!-- Sold Out  this Sculpture  section -->
-    <section id="soldOutSection" class="bg-gray" >
+    <section id="soldOutSection" class="bg-gray" style="display:none;" >
         <div class="">
             <div class="container">
             	<div class="col-md-12 center-block text-center">
@@ -492,173 +565,22 @@
      <hr>
      		<div class="container">
             	
-                
-                
                 	<div class="col-md-3 sidebar">
                     	
                         <div class="panel-group" id="accordion">
-                          <div class="panel panel-default">
-                            <div class="panel-heading">
-                              <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                  Sculpture
-                                </a>
-                              </h4>
-                            </div>
-                            <div id="collapseOne" class="panel-collapse collapse in">
-                              <div class="panel-body">
-                              	<a href="#">Subcategory 1</a><hr>
-                                <a href="#">Subcategory 2</a><hr>
-                                <a href="#">Subcategory 3</a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="panel panel-default">
-                            <div class="panel-heading">
-                              <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                                  Painting
-                                </a>
-                              </h4>
-                            </div>
-                            <div id="collapseTwo" class="panel-collapse collapse">
-                              <div class="panel-body">
-                                <a href="#">Subcategory 1</a><hr>
-                                <a href="#">Subcategory 2</a><hr>
-                                <a href="#">Subcategory 3</a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="panel panel-default">
-                            <div class="panel-heading">
-                              <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                                  Wall Sculpture
-                                </a>
-                              </h4>
-                            </div>
-                            <div id="collapseThree" class="panel-collapse collapse">
-                              <div class="panel-body">
-                               <a href="#">Subcategory 1</a><hr>
-                                <a href="#">Subcategory 2</a><hr>
-                                <a href="#">Subcategory 3</a>
-                              </div>
-                            </div>
-                          </div>
+                          
+                          
                         </div>
 
 					 </div>
                 	
                 
-                <div class="col-md-9">
+                <div class="col-md-9" id="idGalleryItemsWrapper">
                 	
                     <h1> Gallery</h1>
                     <div class="clearfix"></div><br>
-                    <article>
-                   	  <div class="col-md-3 text-center">
-                        	<div class="thumbnail "><a href="#"  data-toggle="modal" data-target=".bs-example-modal-lg">
-                            <img src="img/th-01.jpg"></a></div>
-                        	<h4><strong class="color-green">Wall Sculpture </strong></h4>
-                            <p>8.5 x 9 x 9 in<br>
-                            20 x 22 x 22 cm </p>
-                            <h4>Price :  Rs. 2500</h4>
-                                                            
-                            
-                          </div>
-                    </article>
-                    
-                    <article>
-                   	  <div class="col-md-3 text-center">
-                        	<div class="thumbnail "><a href="#"  data-toggle="modal" data-target=".bs-example-modal-lg">
-                            <img src="img/th-02.jpg"></a></div>
-                        	<h4><strong class="color-green">Wall Sculpture </strong></h4>
-                            <p>8.5 x 9 x 9 in<br>
-                            20 x 22 x 22 cm </p>
-                            <h4>Price :  Rs. 2500</h4>
-                                                            
-                            
-                          </div>
-                    </article>
-                    
-                    <article>
-                   	  <div class="col-md-3 text-center">
-                        	<div class="thumbnail "><a href="#"  data-toggle="modal" data-target=".bs-example-modal-lg">
-                            <img src="img/th-03.jpg"></a></div>
-                        	<h4><strong class="color-green">Wall Sculpture </strong></h4>
-                            <p>8.5 x 9 x 9 in<br>
-                            20 x 22 x 22 cm </p>
-                            <h4>Price :  Rs. 2500</h4>
-                                                            
-                            
-                          </div>
-                    </article>
-                    
-                    <article>
-                   	  <div class="col-md-3 text-center">
-                        	<div class="thumbnail "><a href="#"  data-toggle="modal" data-target=".bs-example-modal-lg">
-                            <img src="img/th-04.jpg"></a></div>
-                        	<h4><strong class="color-green">Wall Sculpture </strong></h4>
-                            <p>8.5 x 9 x 9 in<br>
-                            20 x 22 x 22 cm </p>
-                            <h4>Price :  Rs. 2500</h4>
-                                                            
-                            
-                          </div>
-                    </article>
-                    
-                    <div class="clearfix"></div><br>
-                    <article>
-                   	  <div class="col-md-3 text-center">
-                        	<div class="thumbnail "><a href="#"  data-toggle="modal" data-target=".bs-example-modal-lg">
-                            <img src="img/th-01.jpg"></a></div>
-                        	<h4><strong class="color-green">Wall Sculpture </strong></h4>
-                            <p>8.5 x 9 x 9 in<br>
-                            20 x 22 x 22 cm </p>
-                            <h4>Price :  Rs. 2500</h4>
-                                                            
-                            
-                          </div>
-                    </article>
-                    
-                    <article>
-                   	  <div class="col-md-3 text-center">
-                        	<div class="thumbnail "><a href="#"  data-toggle="modal" data-target=".bs-example-modal-lg">
-                            <img src="img/th-02.jpg"></a></div>
-                        	<h4><strong class="color-green">Wall Sculpture </strong></h4>
-                            <p>8.5 x 9 x 9 in<br>
-                            20 x 22 x 22 cm </p>
-                            <h4>Price :  Rs. 2500</h4>
-                                                            
-                            
-                          </div>
-                    </article>
-                    
-                    <article>
-                   	  <div class="col-md-3 text-center">
-                        	<div class="thumbnail "><a href="#"  data-toggle="modal" data-target=".bs-example-modal-lg">
-                            <img src="img/th-03.jpg"></a></div>
-                        	<h4><strong class="color-green">Wall Sculpture </strong></h4>
-                            <p>8.5 x 9 x 9 in<br>
-                            20 x 22 x 22 cm </p>
-                            <h4>Price :  Rs. 2500</h4>
-                                                            
-                            
-                          </div>
-                    </article>
-                    
-                    <article>
-                   	  <div class="col-md-3 text-center">
-                        	<div class="thumbnail "><a href="#"  data-toggle="modal" data-target=".bs-example-modal-lg">
-                            <img src="img/th-04.jpg"></a></div>
-                        	<h4><strong class="color-green">Wall Sculpture </strong></h4>
-                            <p>8.5 x 9 x 9 in<br>
-                            20 x 22 x 22 cm </p>
-                            <h4>Price :  Rs. 2500</h4>
-                                                            
-                            
-                          </div>
-                    </article>
-                    
+                    <div id="idGalleryItemsContainer"></div>
+                    <div id="idGalleryItemsContainer-Painting"></div>
                     
                     <div class="clearfix"></div><br>
                    
