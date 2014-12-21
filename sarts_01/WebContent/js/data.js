@@ -17,13 +17,7 @@ var categoryArray = [ {
 		"imgPrice" : "2000INR"
 	},
 
-	
 	{
-		"imgPath" : "img/thumbnails/Thumbnail_211x141_3.jpg",
-		"imgDescription" : "Thumbnail 1",
-		"imgDimension" : "10x10x01x10",
-		"imgPrice" : "2000INR"
-	},{
 		"imgPath" : "img/thumbnails/Thumbnail_211x141_4.jpg",
 		"imgDescription" : "Thumbnail 1",
 		"imgDimension" : "10x10x01x10",
