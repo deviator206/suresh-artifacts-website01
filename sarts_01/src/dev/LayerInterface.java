@@ -80,12 +80,12 @@ public class LayerInterface extends HttpServlet {
 		// Recipient's email ID needs to be mentioned.
 		//String to = "dr.supriya2186@gmail.com";
 		String to = "suresh.chepuri86@gmail.com";
-		try {
+		/*try {
 			to = (String) jsonFormatterObject.get("email");
 		} catch (JSONException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
-		}
+		}*/
 		// Sender's email ID needs to be mentioned
 		String from = "testoman02@gmail.com";
 		// Assuming you are sending email from localhost

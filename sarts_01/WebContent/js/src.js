@@ -73,7 +73,7 @@ $(document)
 		}
 
 		var clickHandler = function() {
-			alert(" clicked");
+			
 
 			var objForServer = {};
 
